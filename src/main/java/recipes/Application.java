@@ -8,9 +8,19 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-@EntityScan("recipes")
+
 @SpringBootApplication
+@EntityScan
 public class Application extends WebMvcConfigurerAdapter {
+
+
+    @Autowired
+    private HandlerInterceptor authInterceptor;
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(authInterceptor);
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
