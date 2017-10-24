@@ -23,11 +23,13 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @PostMapping
+    @Role({ADMIN})
     public ResponseEntity<Category> createCategory(@RequestBody Category category) {
         return ResponseEntity.ok(categoryService.createCategory(category));
     }
 
     @PutMapping("/{id}")
+    @Role({ADMIN})
     public ResponseEntity<Category> updateCategory(@PathVariable long id, @RequestBody Category category) {
         try {
             return ResponseEntity.ok(categoryService.updateCategory(id, category));
@@ -37,7 +39,9 @@ public class CategoryController {
     }
 
     @DeleteMapping("/{id}")
+    @Role({ADMIN})
     public ResponseEntity<String> deleteCategory(@PathVariable long id) {
+        categoryService.deleteCategory(id);
         return ResponseEntity.ok("Delete Success!");
     }
 
@@ -58,5 +62,7 @@ public class CategoryController {
     public ResponseEntity<List<Recipe>> getRecipesByCategoryId(@PathVariable long id) {
         return ResponseEntity.ok(categoryService.getRecipesByCategoryId(id));
     }
+
+
 
 }

@@ -44,7 +44,6 @@ public class CategoryService {
     }
 
     public List<Recipe> getRecipesByCategoryId(long id) {
-        //System.out.println(categoryRepository.findOne(id).getRecipes());
         return categoryRepository.findOne(id).getRecipes();
     }
 }

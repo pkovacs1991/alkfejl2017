@@ -2,6 +2,8 @@ package recipes.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.EqualsAndHashCode;;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,11 +16,12 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = {"id"})
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String username;
 
@@ -31,7 +34,7 @@ public class User {
     @JsonIgnore
     private List<Recipe> recipes;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "favouriteUsers")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "favouriteUsers")
     @JsonIgnore
     private Set<Recipe> favoriteRecipes;
 
@@ -42,4 +45,5 @@ public class User {
     public enum Role {
         GUEST, USER, ADMIN
     }
+
 }

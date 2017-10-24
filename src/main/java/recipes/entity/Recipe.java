@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.Set;
@@ -14,6 +15,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = {"id"})
 public class Recipe {
     
     @Id
@@ -34,13 +36,14 @@ public class Recipe {
     @Column(nullable=false)
     private String description;
 
-    @ManyToMany
-    private Set<Recipe> favouriteUsers;
+    @ManyToMany()
+    @JsonIgnore
+    private Set<User> favouriteUsers;
 
     @ManyToOne(targetEntity = Category.class, optional = false)
     @JoinColumn
     @JsonIgnoreProperties("recipes")
     private Category category;
-    
+
 
 }
