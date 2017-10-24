@@ -46,4 +46,11 @@ public class UserController {
         userService.logout();
         return ResponseEntity.ok().body("Successful logout!");
     }
+    
+    @Role({ADMIN})
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable long id) {
+        userService.deleteUser(id);
+        return ResponseEntity.ok("Delete Success!");
+    }
 }

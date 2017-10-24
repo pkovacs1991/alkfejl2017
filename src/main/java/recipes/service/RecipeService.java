@@ -1,6 +1,5 @@
 package recipes.service;
 
-
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,7 @@ import recipes.service.exception.NotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+import recipes.service.exception.NotOwnRecipeException;
 
 @Service
 @Data
@@ -25,13 +24,19 @@ public class RecipeService {
         return recipeRepository.save(recipe);
     }
 
-    public Recipe updateRecipe(long id, Recipe recipe, User user) throws NotFoundException {
-
-        if(recipeRepository.findOne(id) == null ) {
+    public Recipe updateRecipe(long id, Recipe recipe, User user) throws NotFoundException, NotOwnRecipeException {
+        Recipe currentRecipe = recipeRepository.findOne(id);
+        if (currentRecipe == null) {
             throw new NotFoundException();
         }
+        long userID = currentRecipe.getOwner().getId();
+        if (userID != user.getId()) {
+            throw new NotOwnRecipeException();
+        }
+        recipe.setId(id);
         recipe.setOwner(user);
         return recipeRepository.save(recipe);
+        //return recipeRepository.save(currentRecipe);
     }
 
     public void deleteRecipe(Long id) {

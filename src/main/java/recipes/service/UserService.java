@@ -51,4 +51,8 @@ public class UserService {
                 user.getUsername(), user.getPassword())
                 .isPresent();
     }
+    
+    public void deleteUser(Long id) {
+        userRepository.delete(id);
+    }
 }

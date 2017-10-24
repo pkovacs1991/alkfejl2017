@@ -26,6 +26,7 @@ public class CategoryService {
         if(categoryRepository.findOne(id) == null ) {
             throw new NotFoundException();
         }
+        category.setId(id);
         return categoryRepository.save(category);
     }
 

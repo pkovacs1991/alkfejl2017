@@ -14,6 +14,7 @@ import java.util.List;
 
 import static recipes.entity.User.Role.ADMIN;
 import static recipes.entity.User.Role.USER;
+import recipes.service.exception.NotOwnRecipeException;
 
 @RestController
 @RequestMapping("/api/recipes")
@@ -36,7 +37,7 @@ public class RecipeController {
     public ResponseEntity<Recipe> updateRecipe(@PathVariable long id, @RequestBody Recipe recipe) {
         try {
             return ResponseEntity.ok(recipeService.updateRecipe(id, recipe,userService.getLoggedInUser()));
-        } catch (NotFoundException e) {
+        } catch (NotFoundException | NotOwnRecipeException e) {
             return ResponseEntity.badRequest().build();
         }
     }

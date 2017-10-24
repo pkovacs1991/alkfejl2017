@@ -30,7 +30,7 @@ public class User {
 
     private String password;
 
-    @OneToMany(targetEntity = Recipe.class, mappedBy = "owner")
+    @OneToMany(targetEntity = Recipe.class, mappedBy = "owner", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Recipe> recipes;
 
