@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -16,22 +18,23 @@ public class Recipe {
     private long id;
     
     @Column(nullable=false)
-    private String recipename;
+    private String recipeName;
     
-    @Column(nullable=false)
-    private String username;
+
+    @ManyToOne(targetEntity = User.class)
+    private User owner;
     
     @Column(nullable=false)
     private String ingredients;
     
     @Column(nullable=false)
     private String description;
-    
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Set<Recipe> favouriteUsers;
+
+    @ManyToOne(targetEntity = Category.class)
     private Category category;
     
-    public enum Category {
-        SOUP, PIZZA, PASTA
-    }
+
 }

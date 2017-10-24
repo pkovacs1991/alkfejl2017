@@ -7,6 +7,8 @@ Minden felhasználóra vonatkozóan:
     Regisztráció
     Bejelentkezés
     Kijelentkezés
+    Recept kedvencekhez adása
+    Kedvencekből recept törlése
     Receptek létrehozása
     Receptek törlése
 
@@ -16,6 +18,8 @@ Adminisztrátor(ok)ra vonatkozóan:
     Báremly felhasználó receptjeinek módosítása
     Báremly felhasználó receptjeinek törlése
     Bármely felhasználó törlése
+    Recept kedvencekhez adása
+    Kedvencekből recept törlése
     Kategóría létrehozása
 	Kategóría módosítása
 	Kategóría törlése

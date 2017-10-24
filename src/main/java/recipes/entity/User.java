@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -24,6 +26,12 @@ public class User {
     private String email;
 
     private String password;
+
+    @OneToMany(targetEntity = Recipe.class, mappedBy = "owner")
+    private List<Recipe> recipes;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "favouriteUsers")
+    private Set<Recipe> favoriteRecipes;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
