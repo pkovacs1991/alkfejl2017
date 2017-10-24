@@ -28,9 +28,11 @@ public class User {
     private String password;
 
     @OneToMany(targetEntity = Recipe.class, mappedBy = "owner")
+    @JsonIgnore
     private List<Recipe> recipes;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "favouriteUsers")
+    @JsonIgnore
     private Set<Recipe> favoriteRecipes;
 
     @Column(nullable = false)

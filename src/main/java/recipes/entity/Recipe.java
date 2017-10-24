@@ -1,6 +1,9 @@
 package recipes.entity;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +25,7 @@ public class Recipe {
     
 
     @ManyToOne(targetEntity = User.class)
+    @JsonIgnoreProperties("recipes")
     private User owner;
     
     @Column(nullable=false)
@@ -30,10 +34,12 @@ public class Recipe {
     @Column(nullable=false)
     private String description;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany
     private Set<Recipe> favouriteUsers;
 
-    @ManyToOne(targetEntity = Category.class)
+    @ManyToOne(targetEntity = Category.class, optional = false)
+    @JoinColumn
+    @JsonIgnoreProperties("recipes")
     private Category category;
     
 
