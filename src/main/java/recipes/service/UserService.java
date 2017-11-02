@@ -31,7 +31,6 @@ public class UserService {
             return this.user = userRepository.findByUsername(user.getUsername()).get();
         }
         throw new UserNotValidException();
-//        return null;
     }
 
     public void logout() {

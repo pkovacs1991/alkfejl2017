@@ -38,6 +38,10 @@ public class User {
     @JsonIgnore
     private Set<Recipe> favoriteRecipes;
 
+    @OneToMany(targetEntity = Comment.class, mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Comment> comments;
+    
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Role role;

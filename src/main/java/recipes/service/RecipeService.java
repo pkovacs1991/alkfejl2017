@@ -36,7 +36,6 @@ public class RecipeService {
         recipe.setId(id);
         recipe.setOwner(user);
         return recipeRepository.save(recipe);
-        //return recipeRepository.save(currentRecipe);
     }
 
     public void deleteRecipe(Long id) {

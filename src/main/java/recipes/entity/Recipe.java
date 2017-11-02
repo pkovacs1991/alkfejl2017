@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -44,6 +45,10 @@ public class Recipe {
     @JoinColumn
     @JsonIgnoreProperties("recipes")
     private Category category;
+    
+    @OneToMany(targetEntity = Comment.class, mappedBy = "recipe", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Comment> comments;
 
 
 }
