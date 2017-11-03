@@ -125,6 +125,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 5. App indítása: `pom.xml` -> `Run Maven...` -> `Goals: spring-boot:run`
    vagy
    `mvn spring-boot:run`
+6. Ezek után a `http://localhost:8080/` címen el tujdjuk érni a szerverünket
 
 ### 2.2 Adatbázis-terv
 
@@ -167,7 +168,54 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
     - `application.properties`
 	- `import.sql`
 
-### 2.4 Végpont-tervek és leírások
+### 2.4 Végpontok
+
+- `GET/`
+  - `/`: Főoldal
+  - `/api/user/`
+    - `/`: Saját felhasználói fiók elérése
+	- `/login`: Bejelentkezés
+	- `/logout`: Kijelentkezés
+  - `/api/recipes/`
+    - `/`: Az összes recept lekérdezése
+	- `/my`: Saját receptek lekérdezése
+	- `/{id}`: Egy recept lekérdezése
+  - `/api/category/`
+    - `/`: Az összes kategória lekérdezése
+	- `/{id}`: Egy kategória lekérdezése
+	- `/recipes/{id}`: Egy kategória alapján az összes recept lekérdezése
+  - `/api/comments/`
+    - `/`: Az összes hozzászólás lekérdezése
+	- `/my`: Az összes saját hozzászólás lekérdezése
+	- `/{id}`: Egy hozzászólás lekérdezése
+- `POST/`
+  - `/api/user/`
+    - `/register`: Regisztráció
+  - `/api/recipes/`
+    - `/`: Recept létrehozása
+	- `/favourites/{id}`: Recept hozzáadása a kedvencek közé
+  - `/api/category/`
+    - `/`: Kategória létrehozása
+  - `/api/comments/`
+    - `/`: Hozzászólás létrehozása
+- `PUT/`
+  - `/api/recipes/`
+    - `/{id}`: Recept módosítása
+  - `/api/category/`
+    - `/{id}`: Kategória módosítása
+  - `/api/comments/`
+    - `/{id}`: Hozzászólás módosítása
+- `DELETE/`
+  - `/api/user/`
+    - `/{id}`: Felhasználó törlése
+  - `/api/recipes/`
+    - `/{id}`: Recept törlése
+	- `/favourites/{id}`: Recept törlése a kedvencek közül
+  - `/api/category/`
+    - `/{id}`: Kategória törlése
+  - `/api/comments/`
+    - `/{id}`: Hozzászólás törlése
+
 1 db végpont működésének leírása, mi történik, milyen lépések követik egymást (szekvenciadiagram)
 
 ### 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
