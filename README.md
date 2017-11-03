@@ -2,7 +2,7 @@
 
 A projekt célja egy receptek feltöltésére használható webes alkalmazás elkészítése.
 
-##### Funkcionális Követelmények:
+### Funkcionális Követelmények:
 
 **Minden felhasználóra** vonatkozóan:
 
@@ -31,7 +31,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 * Kategória módosítása
 * Kategória törlése
 
-##### Nem Funkcionális Követelmények:
+### Nem Funkcionális Követelmények:
 
 - Biztonság:
   - jelszavak hashelése
@@ -40,7 +40,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
   - csak a felhasználó részére érdekes dolgok jelennek meg
   - Intuitív felhasználói felület
 
-##### Szakmai Fogalmak:
+### Szakmai Fogalmak:
 
 - **Kategória:** Egy recept kategóriája pl: Leves,Pizza,Tésztaétel
 - **Recept:** Egy kategóriába besorolható étel.
@@ -54,7 +54,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
   - Hozzászólások
 		
 
-##### Szerepkörök
+### Szerepkörök
 
 * **Adminisztrátor:** Kezeli a kategóriákat, ellenőrzi a recepteket, hozzászólásokat, ha baj van velük törölheti őket.
 * **Felhasználó:** Feltölthet új recepteket, sajátjait módosíthatja, törölheti, illetve hozzászólhat, a saját hozzászólásait törölheti, módosíthatja.
