@@ -216,6 +216,6 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
   - `/api/comments/`
     - `/{id}`: Hozzászólás törlése
 
-####Szekvenciadiagram
+#### Szekvenciadiagram
 
 ### 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
