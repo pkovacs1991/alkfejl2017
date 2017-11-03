@@ -79,8 +79,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 1. [Git](https://git-scm.com/) verziókezelő telepítése  
    *A [Githubon](https://github.com/) történő regisztráció ajánlott!*
 2. Projekt klónozása lokális gépre: `git clone https://github.com/pkovacs1991/alkfejl2017.git`
-3. A projektkönyvtárban a [Spring Boot](https://projects.spring.io/spring-boot/) függőségek beállítása:  
-   `pom.xml`  
+3. A projektkönyvtárban a [Spring Boot](https://projects.spring.io/spring-boot/) függőségek beállítása: `pom.xml`
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -119,12 +118,11 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
    </project>
    ```
-4. Adatbázis felépítése példaadatokkal: `import.sql` fájlban  
-   pl: `INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');`  
-   *Fontos ezt beállítani, ugyanis a H2 adatbázis csak a memóriában tárol az adatokat. Enélkül üres tábláink lennének.*
-5. App indítása: `pom.xml` -> `Run Maven...` -> `Goals: spring-boot:run`  
-   vagy  
-   `mvn spring-boot:run`  
+4. Adatbázis felépítése példaadatokkal az `import.sql` fájlban. pl:  
+   `INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');`  
+   *(Fontos ezt beállítani, ugyanis a H2 adatbázis csak a memóriában tárol az adatokat. Enélkül üres tábláink lennének!)*
+5. App indítása: `pom.xml` jobb klikk -> `Run Maven...` -> `Goals: spring-boot:run` vagy  
+   parancssorból: `mvn spring-boot:run`  
 6. Ezek után a `http://localhost:8080/` címen el tujdjuk érni a szerverünket
 
 ### 2.2 Adatbázis-terv
@@ -219,3 +217,5 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 #### Szekvenciadiagram
 
 ### 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
+
+#### -
