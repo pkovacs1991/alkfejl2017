@@ -2,6 +2,8 @@
 
 A projekt célja egy receptek feltöltésére használható webes alkalmazás elkészítése.
 
+## 1. Projektötlet
+
 ### Funkcionális Követelmények:
 
 **Minden felhasználóra** vonatkozóan:
