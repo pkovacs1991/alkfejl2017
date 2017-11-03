@@ -37,7 +37,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
 - Biztonság:
   - jelszavak hashelése
-        
+
 - Kezelhetőség:
   - csak a felhasználó részére érdekes dolgok jelennek meg
   - Intuitív felhasználói felület
@@ -54,7 +54,6 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
   - Hozzávaló (több is lehet)
   - Leírás
   - Hozzászólások
-		
 
 ### 1.4 Szerepkörök
 
@@ -118,11 +117,11 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
    </project>
    ```
-4. Adatbázis felépítése példaadatokkal az `import.sql` fájlban. pl:  
-   `INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');`  
+4. Adatbázis felépítése példaadatokkal az `import.sql` fájlban.  
+   pl: `INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');`  
    *(Fontos ezt beállítani, ugyanis a H2 adatbázis csak a memóriában tárol az adatokat. Enélkül üres tábláink lennének!)*
-5. App indítása: `pom.xml` jobb klikk -> `Run Maven...` -> `Goals: spring-boot:run` vagy  
-   parancssorból: `mvn spring-boot:run`  
+5. App indítása: `pom.xml` jobb klikk -> `Run Maven...` -> `Goals: spring-boot:run`  
+   vagy parancssorból: `mvn spring-boot:run`
 6. Ezek után a `http://localhost:8080/` címen el tujdjuk érni a szerverünket
 
 ### 2.2 Adatbázis-terv
