@@ -64,9 +64,9 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
 ## 2. Backend megvalósítása
 
-## 2.1 Fejlesztői környezet
+### 2.1 Fejlesztői környezet
 
-### Felhasznált eszközök
+#### Felhasznált eszközök
 
 * [Git](https://git-scm.com/) verziókezelő
 * [Java](https://www.java.com/) [Spring Boot](https://projects.spring.io/spring-boot/) technológia használata
@@ -74,14 +74,14 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 * [MAVEN](https://maven.apache.org/) a projekt menedzseléséhez és a build folyamat automatizálásához
 * [Github](https://github.com/) a projekt közzétételéhez
 
-### Fejlesztőkörnyezet felállítása
+#### Fejlesztőkörnyezet felállítása
 
 1. [Git](https://git-scm.com/) verziókezelő telepítése
    *A [Githubon](https://github.com/) történő regisztráció ajánlott!*
-2. Projekt klónozása lokális gépre: 'git clone https://github.com/pkovacs1991/alkfejl2017.git'
+2. Projekt klónozása lokális gépre: `git clone https://github.com/pkovacs1991/alkfejl2017.git`
 3. A projektkönyvtárban a [Spring Boot](https://projects.spring.io/spring-boot/) függőségek beállítása:
-   'pom.xml'
-   '''xml
+   `pom.xml`
+   ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -118,56 +118,56 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 	</build>
 
    </project>
-   '''
-4. Adatbázis felépítése példaadatokkal: 'import.sql' fájlban
-   pl: 'INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');'
+   ```
+4. Adatbázis felépítése példaadatokkal: `import.sql` fájlban
+   pl: `INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');`
    *Fontos ezt beállítani, ugyanis a H2 adatbázis csak a memóriában tárol az adatokat. Enélkül üres tábláink lennének.*
-5. App indítása: 'pom.xml' -> 'Run Maven...' -> 'Goals: spring-boot:run'
+5. App indítása: `pom.xml` -> `Run Maven...` -> `Goals: spring-boot:run`
    vagy
-   'mvn spring-boot:run'
+   `mvn spring-boot:run`
 
-## 2.2 Adatbázis-terv
+### 2.2 Adatbázis-terv
 
-## 2.3 Könyvtárstruktúra
+### 2.3 Könyvtárstruktúra
 
 - main
   - java
     - recipes
       - config
-	    - 'AuthInterceptor.java'
+	    - `AuthInterceptor.java`
       - controller
-	    - 'CategoryController.java'
-		- 'CommentController.java'
-		- 'RecipeController.java'
-		- 'UserController.java'
+	    - `CategoryController.java`
+		- `CommentController.java`
+		- `RecipeController.java`
+		- `UserController.java`
       - entity
-	    - 'Category.java'
-		- 'Comment.java'
-		- 'Recipe.java'
-		- 'User.java'
+	    - `Category.java`
+		- `Comment.java`
+		- `Recipe.java`
+		- `User.java`
       - repository
-	    - 'CategoryRepository.java'
-		- 'CommentRepository.java'
-		- 'RecipeRepository.java'
-		- 'UserRepository.java'
+	    - `CategoryRepository.java`
+		- `CommentRepository.java`
+		- `RecipeRepository.java`
+		- `UserRepository.java`
       - service
 	    - annotation
-		  - 'Role.java'
+		  - `Role.java`
 		- exception
-		  - 'NotFoundException.java'
-		  - 'NotOwnCommentException.java'
-		  - 'NotOwnRecipeException.java'
-		  - 'UserNotValidException.java'
-	    - 'CategoryService.java'
-		- 'CommentService.java'
-		- 'RecipeService.java'
-		- 'UserService.java'
-      - 'Application.java'
+		  - `NotFoundException.java`
+		  - `NotOwnCommentException.java`
+		  - `NotOwnRecipeException.java`
+		  - `UserNotValidException.java`
+	    - `CategoryService.java`
+		- `CommentService.java`
+		- `RecipeService.java`
+		- `UserService.java`
+      - `Application.java`
   - resources
-    - 'application.properties'
-	- 'import.sql'
+    - `application.properties`
+	- `import.sql`
 
-## 2.4 Végpont-tervek és leírások
+### 2.4 Végpont-tervek és leírások
 1 db végpont működésének leírása, mi történik, milyen lépések követik egymást (szekvenciadiagram)
 
-## 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
+### 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
