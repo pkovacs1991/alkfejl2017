@@ -1,52 +1,61 @@
-Alkalmazások fejlesztése projekt: Recept TO-DO
+# Alkalmazások fejlesztése projekt: Recept TO-DO
 
 A projekt célja egy receptek feltöltésére használható webes alkalmazás elkészítése.
-Funkcionális Követelmények:
-Minden felhasználóra vonatkozóan:
 
-    Regisztráció
-    Bejelentkezés
-    Kijelentkezés
-    Recept kedvencekhez adása
-    Kedvencekből recept törlése
-    Receptek létrehozása
-    Receptek törlése
+##### Funkcionális Követelmények:
 
-Adminisztrátor(ok)ra vonatkozóan:
+**Minden felhasználóra** vonatkozóan:
 
-    
-    Báremly felhasználó receptjeinek módosítása
-    Báremly felhasználó receptjeinek törlése
-    Bármely felhasználó törlése
-    Recept kedvencekhez adása
-    Kedvencekből recept törlése
-    Kategóría létrehozása
-	Kategóría módosítása
-	Kategóría törlése
+* Regisztráció
+* Bejelentkezés
+* Kijelentkezés
+* Recept kedvencekhez adása
+* Kedvencekből recept törlése
+* Receptek létrehozása
+* Receptek törlése
+* hozzászólás a receptekhez
+* hozzászólás szerkesztése, törlése
 
-Nem Funkcionális Követelmények:
+**Adminisztrátor(ok)ra** vonatkozóan:
 
-    Biztonság:
-        jelszavak hashelése
+* Bármely felhasználó receptjeinek módosítása
+* Bármely felhasználó receptjeinek törlése
+* Bármely felhasználó hozzászólásának módosítása
+* Bármely felhasználó hozzászólásának törlése
+* Bármely felhasználó törlése
+* Recept kedvencekhez adása
+* Kedvencekből recept törlése
+* Receptek létrehozása
+* Receptek törlése
+* Kategória létrehozása
+* Kategória módosítása
+* Kategória törlése
+
+##### Nem Funkcionális Követelmények:
+
+- Biztonság:
+  - jelszavak hashelése
         
-    Kezelhetőség:
-        csak a felhasználó részére érdekes dolgok jelennek meg
-        Intuitiv felhasználói felület
+- Kezelhetőség:
+  - csak a felhasználó részére érdekes dolgok jelennek meg
+  - Intuitív felhasználói felület
 
-Szakmai Fogalmak:
+##### Szakmai Fogalmak:
 
-	Kategória: Egy recept kategóriája pl: Leves,Pizza,Tésztaétel
-    Recept: Egy kategóriába besorolható étel.
-	Hozzávaló: Egy recept elkészítéséhez való hozzávaló pl: Só,cukor,liszt
-    Recept felépítése:
-        Kategória
-		Felhasználó aki feltöltötte
-		Hozzávaló (több is lehet)
-		Leírás
+- **Kategória:** Egy recept kategóriája pl: Leves,Pizza,Tésztaétel
+- **Recept:** Egy kategóriába besorolható étel.
+- **Hozzávaló:** Egy recept elkészítéséhez való hozzávaló pl: Só,cukor,liszt
+
+- Recept felépítése:
+  - Kategória
+  - Felhasználó aki feltöltötte
+  - Hozzávaló (több is lehet)
+  - Leírás
+  - Hozzászólások
 		
 
-Szerepkörök
+##### Szerepkörök
 
-    Adminisztrátor: Kezeli a kategóriákat, ellenőrzi a recepteket ha baj van vele törölheti
-    Felhasználó: Feltölthet új recepteket, sajátjait módosíthatja, törölheti.
-	Nem bejelentkezett felhasználó: Böngészheti a recepteket.
+* **Adminisztrátor:** Kezeli a kategóriákat, ellenőrzi a recepteket, hozzászólásokat, ha baj van velük törölheti őket.
+* **Felhasználó:** Feltölthet új recepteket, sajátjait módosíthatja, törölheti, illetve hozzászólhat, a saját hozzászólásait törölheti, módosíthatja.
+* **Nem bejelentkezett felhasználó:** Böngészheti a recepteket, elolvashatja a hozzászólásokat.
