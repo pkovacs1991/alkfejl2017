@@ -126,6 +126,8 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
 ### 2.2 Adatbázis-terv
 
+![Adatbázis-terv modellje](docs/adatbazisterv.png)
+
 ### 2.3 Könyvtárstruktúra
 
 - main
