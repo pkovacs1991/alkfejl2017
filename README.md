@@ -170,7 +170,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
 ### 2.4 Végpontok
 
-#### **user**
+#### user
 
 - `GET /api/user` : Saját felhasználói fiók elérése
 - `GET /api/user/login` : Bejelentkezés
@@ -178,7 +178,8 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 - `POST /api/user/register` : Regisztráció
 - `DELETE /api/user/{id}` : Felhasználó törlése
 
-#### **Recipe**
+#### Recipe
+
 - `GET /api/recipes` : Az összes recept lekérdezése
 - `GET /api/recipes/my` : Saját receptek lekérdezése
 - `GET /api/recipes/{id}` : Egy recept lekérdezése
@@ -188,7 +189,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 - `DELETE /api/recipes/{id}` : Recept törlése
 - `DELETE /api/recipes/favourites/{id}` : Recept törlése a kedvencek közül
 
-#### **Category**
+#### Category
 
 - `GET /api/category` : Az összes kategória lekérdezése
 - `GET /api/category/{id}` : Egy kategória lekérdezése
@@ -197,7 +198,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 - `PUT /api/category/{id}` : Kategória módosítása
 - `DELETE /api/category/{id}` : Kategória törlése
 
-#### **Comment**
+#### Comment
 
 - `GET /api/comments` : Az összes hozzászólás lekérdezése
 - `GET /api/comments/my` : Az összes saját hozzászólás lekérdezése
@@ -206,7 +207,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 - `PUT /api/comments/{id}` : Hozzászólás módosítása
 - `DELETE /api/comments/{id}` : Hozzászólás törlése
 
-#### **Szekvenciadiagram**
+### 2.5 Szekvenciadiagram
 
 A szekvenciadiagram egy felhasználó regisztrálását illusztrálja a `POST /api/user/register` végponton keresztül:
 
