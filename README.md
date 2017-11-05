@@ -169,56 +169,44 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
 ### 2.4 Végpontok
 
-- `GET/`
-  - `/`: Főoldal
-  - `/api/user/`
-    - `/`: Saját felhasználói fiók elérése
-	- `/login`: Bejelentkezés
-	- `/logout`: Kijelentkezés
-  - `/api/recipes/`
-    - `/`: Az összes recept lekérdezése
-	- `/my`: Saját receptek lekérdezése
-	- `/{id}`: Egy recept lekérdezése
-  - `/api/category/`
-    - `/`: Az összes kategória lekérdezése
-	- `/{id}`: Egy kategória lekérdezése
-	- `/recipes/{id}`: Egy kategória alapján az összes recept lekérdezése
-  - `/api/comments/`
-    - `/`: Az összes hozzászólás lekérdezése
-	- `/my`: Az összes saját hozzászólás lekérdezése
-	- `/{id}`: Egy hozzászólás lekérdezése
-- `POST/`
-  - `/api/user/`
-    - `/register`: Regisztráció
-  - `/api/recipes/`
-    - `/`: Recept létrehozása
-	- `/favourites/{id}`: Recept hozzáadása a kedvencek közé
-  - `/api/category/`
-    - `/`: Kategória létrehozása
-  - `/api/comments/`
-    - `/`: Hozzászólás létrehozása
-- `PUT/`
-  - `/api/recipes/`
-    - `/{id}`: Recept módosítása
-  - `/api/category/`
-    - `/{id}`: Kategória módosítása
-  - `/api/comments/`
-    - `/{id}`: Hozzászólás módosítása
-- `DELETE/`
-  - `/api/user/`
-    - `/{id}`: Felhasználó törlése
-  - `/api/recipes/`
-    - `/{id}`: Recept törlése
-	- `/favourites/{id}`: Recept törlése a kedvencek közül
-  - `/api/category/`
-    - `/{id}`: Kategória törlése
-  - `/api/comments/`
-    - `/{id}`: Hozzászólás törlése
+#### **user**
 
-#### Szekvenciadiagram
+- `GET /api/user` : Saját felhasználói fiók elérése
+- `GET /api/user/login` : Bejelentkezés
+- `GET /api/user/logout`: Kijelentkezés
+- `POST /api/user/register` : Regisztráció
+- `DELETE /api/user/{id}` : Felhasználó törlése
+
+#### **Recipe**
+- `GET /api/recipes` : Az összes recept lekérdezése
+- `GET /api/recipes/my` : Saját receptek lekérdezése
+- `GET /api/recipes/{id}` : Egy recept lekérdezése
+- `POST /api/recipes` : Recept létrehozása
+- `POST /api/recipes/favourites/{id}` : Recept hozzáadása a kedvencek közé
+- `PUT /api/recipes/{id}` : Recept módosítása
+- `DELETE /api/recipes/{id}` : Recept törlése
+- `DELETE /api/recipes/favourites/{id}` : Recept törlése a kedvencek közül
+
+#### **Category**
+
+- `GET /api/category` : Az összes kategória lekérdezése
+- `GET /api/category/{id}` : Egy kategória lekérdezése
+- `GET /api/category/recipes/{id}` : Egy kategória alapján az összes recept lekérdezése
+- `POST /api/category` : Kategória létrehozása
+- `PUT /api/category/{id}` : Kategória módosítása
+- `DELETE /api/category/{id}` : Kategória törlése
+
+#### **Comment**
+
+- `GET /api/comments` : Az összes hozzászólás lekérdezése
+- `GET /api/comments/my` : Az összes saját hozzászólás lekérdezése
+- `GET /api/comments/{id}` : Egy hozzászólás lekérdezése
+- `POST /api/comments` : Hozzászólás létrehozása
+- `PUT /api/comments/{id}` : Hozzászólás módosítása
+- `DELETE /api/comments/{id}` : Hozzászólás törlése
+
+#### **Szekvenciadiagram**
+
+A szekvenciadiagram egy felhasználó regisztrálását illusztrálja a `POST /api/user/register` végponton keresztül:
 
 ![Egy regisztráció szekvenciadiagramja](docs/szekvenciadiagram.png)
-
-### 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
-
-#### -
