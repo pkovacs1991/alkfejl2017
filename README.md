@@ -217,6 +217,8 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 
 #### Szekvenciadiagram
 
+![Egy regisztráció szekvenciadiagramja](docs/szekvenciadiagram.png)
+
 ### 2.5 Fontosabb specifikumok bemutatása (ha van ilyen)
 
 #### -
