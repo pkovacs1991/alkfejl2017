@@ -38,6 +38,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 - Biztonság:
   - jelszavak hashelése
 
+##
 - Kezelhetőség:
   - csak a felhasználó részére érdekes dolgok jelennek meg
   - Intuitív felhasználói felület
@@ -210,3 +211,5 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 A szekvenciadiagram egy felhasználó regisztrálását illusztrálja a `POST /api/user/register` végponton keresztül:
 
 ![Egy regisztráció szekvenciadiagramja](docs/szekvenciadiagram.png)
+
+## 4. Működő prototípus
