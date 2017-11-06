@@ -1,6 +1,7 @@
 package recipes.service;
 
 import lombok.Data;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
@@ -23,6 +24,8 @@ public class UserService {
     }
 
     public User register(User user) {
+        String encryptedPassword = DigestUtils.sha1Hex(user.getPassword());
+        user.setPassword(encryptedPassword);
         return this.user = userRepository.save(user);
     }
 
@@ -46,8 +49,10 @@ public class UserService {
     }
 
     public boolean isValid(User user) {
+        String encryptedPassword = DigestUtils.sha1Hex(user.getPassword());
+
         return userRepository.findByUsernameAndPassword(
-                user.getUsername(), user.getPassword())
+                user.getUsername(), encryptedPassword)
                 .isPresent();
     }
     
