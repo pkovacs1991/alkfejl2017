@@ -123,7 +123,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
    *(Fontos ezt beállítani, ugyanis a H2 adatbázis csak a memóriában tárol az adatokat. Enélkül üres tábláink lennének!)*
 5. App indítása: `pom.xml` jobb klikk -> `Run Maven...` -> `Goals: spring-boot:run`  
    vagy parancssorból: `mvn spring-boot:run`
-6. Ezek után a `http://localhost:8080/` címen el tujdjuk érni a szerverünket
+6. Ezek után a `http://localhost:8080/` címen el tudjuk érni a szerverünket
 
 ### 2.2 Adatbázis-terv
 
@@ -215,7 +215,7 @@ A szekvenciadiagram egy felhasználó regisztrálását illusztrálja a `POST /a
 
 ## 4. Működő prototípus [Frontend megvalósítása]
 
-A projekt frontend oldala egy külön repositoryban készült el. Ezt a repot az alábbi linken találhatjátok:  
+A projekt frontend oldala egy külön [github](https://github.com/) repositoryban készült el. Ezt a repot az alábbi linken találhatjátok:  
 [https://github.com/pkovacs1991/alkfejl2017-angular](https://github.com/pkovacs1991/alkfejl2017-angular)
 
 ### 4.1 Használati eset diagram
@@ -232,7 +232,26 @@ A projekt frontend oldala egy külön repositoryban készült el. Ezt a repot az
 
 ![Admin használati eset diagramja](docs/usecase_admin.png)
 
-### 4.2 Fejlesztői környezet bemutatása, beállítása, használt technológiák
+### 4.2 Fejlesztői környezet
+
+#### Felhasznált eszközök
+
+* [Git](https://git-scm.com/) verziókezelő
+* [TypeScript](https://www.typescriptlang.org/) programozási nyelv
+* [Angular](https://angular.io/) (2+) keretrendszer  
+  *Ehhez legalább [Node.js](https://nodejs.org/en/) 6.9.0 és NPM 3.0 verziókra van szükségünk*
+* [Visual Studio Code](https://code.visualstudio.com/) fejlesztői környezet
+* [Github](https://github.com/) a projekt közzétételéhez
+
+#### Fejlesztőkörnyezet felállítása
+
+1. [Git](https://git-scm.com/) verziókezelő telepítése  
+   *A [Githubon](https://github.com/) történő regisztráció ajánlott!*
+2. Projekt klónozása lokális gépre: `git clone https://github.com/pkovacs1991/alkfejl2017-angular.git`
+3. A projektkönyvtár megnyitása [Visual Studio Code](https://code.visualstudio.com/) fejlesztői környezetben
+4. A parancssorba (`ctrl+ö`) írjuk be az alábbi utasítást: `npm install`
+5. Ezután az alábbi utasítással indítsuk el a kliens oldalunkat: `npm start`
+6. Ezek után a `http://localhost:4200/` címen el tudjuk érni a kliensüket
 
 ### 4.3 Az alkalmazott könyvtárstruktúra
 
