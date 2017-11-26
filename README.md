@@ -230,7 +230,7 @@ A projekt frontend oldala egy külön repositoryban készült el. Ezt a repot az
 
 #### Admin használati eset diagramja
 
-![Admin használati eset diagramja](docs/admin.png)
+![Admin használati eset diagramja](docs/usercase_admin.png)
 
 ### 4.2 Fejlesztői környezet bemutatása, beállítása, használt technológiák
 
