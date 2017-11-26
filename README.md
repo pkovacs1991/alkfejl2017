@@ -215,7 +215,7 @@ A szekvenciadiagram egy felhasználó regisztrálását illusztrálja a `POST /a
 
 ## 4. Működő prototípus [Frontend megvalósítása]
 
-A projekt frontend oldala egy külön repositoryban készült el. Ezt a repot az alábbi linken találhatjátok:
+A projekt frontend oldala egy külön repositoryban készült el. Ezt a repot az alábbi linken találhatjátok:  
 [https://github.com/pkovacs1991/alkfejl2017-angular](https://github.com/pkovacs1991/alkfejl2017-angular)
 
 ### 4.1 Használati eset diagram
