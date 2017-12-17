@@ -387,32 +387,41 @@ megvalósítása.
 
 **Minden felhasználóra** vonatkozóan:
 
-  - __Regisztráció__: új profil létrehozása a `Regisztráció` menüpont alatt, amelynek segítségével be lehet jelentkezni az oldalra, hogy további funkciókat lehessen elérni.
-  - __Bejelentkezés__: meglévő profillal való belépés az oldalra a `Bejelentkezés` menüpont alatt, hogy további funkciókat lehessen elérni.
-  - __Kijelentkezés__: kilépés a profilunkból a `Kilépés` gombra kattintva.
-  - __Recept kedvencekhez adása__: ha egy recept megtetszett, akkor azt a kedvenceink közé rakhatjuk a recept melletti üres `szív` ikonra kattintva, hogy később gyorsabban megtalálhassuk azt a Kedvelt Receptek menüpont alatt.
-  - __Kedvencekből recept törlése__: ha idő közben mégse kedvelnénk már egy korábbi receptet, akkor ennek segítségével eltávolíthatjuk azt a kedvenceink közül a recept melleti teli `szív` ikonra kattintva.
-  - __Receptek létrehozása__: ha van olyan recept, ami nincs még fent az oldalon és szeretnéd másokkal is megosztani, akkor `Új recept felvétele` gomb segítségével publikálhatod azt az oldalon.
-  - __Receptek törlése__: egy korábban, általad publikált receptet törölhetsz a recept melletti `szemetes` ikonra kattintva.
-  - __Hozzászólás a receptekhez__: egy recept megtekintése alatt lehet látni a hozzákapcsolodó hozzászólásokat. Az `Új hozzászólás` gomb segítségével további hozzászólást adhatunk hozzá.
-  - __Hozzászólás szerkesztése__, törlése: meglévő hozzászólásainkat törölhetjük, illetve módosíthatjuk a hozzászólás mellett lévő `ceruza` és `szemetes` ikon segítségével.
+  - **Regisztráció**: új profil létrehozása a `Regisztráció` menüpont alatt, amelynek segítségével be lehet jelentkezni az oldalra, hogy további funkciókat lehessen elérni.
+  - **Bejelentkezés**: meglévő profillal való belépés az oldalra a `Bejelentkezés` menüpont alatt, hogy további funkciókat lehessen elérni.
+  - **Kijelentkezés**: kilépés a profilunkból a `Kilépés` gombra kattintva.
+  - **Recept kedvencekhez adása**: ha egy recept megtetszett, akkor azt a kedvenceink közé rakhatjuk a recept melletti üres `szív` ikonra kattintva, hogy később gyorsabban megtalálhassuk azt a Kedvelt Receptek menüpont alatt.
+  - **Kedvencekből recept törlése**: ha idő közben mégse kedvelnénk már egy korábbi receptet, akkor ennek segítségével eltávolíthatjuk azt a kedvenceink közül a recept melleti teli `szív` ikonra kattintva.
+  - **Receptek létrehozása**: ha van olyan recept, ami nincs még fent az oldalon és szeretnéd másokkal is megosztani, akkor `Új recept felvétele` gomb segítségével publikálhatod azt az oldalon.
+  - **Receptek törlése**: egy korábban, általad publikált receptet törölhetsz a recept melletti `szemetes` ikonra kattintva.
+  - **Hozzászólás a receptekhez**: egy recept megtekintése alatt lehet látni a hozzákapcsolodó hozzászólásokat. Az `Új hozzászólás` gomb segítségével további hozzászólást adhatunk hozzá.
+  - **Hozzászólás szerkesztése**, törlése: meglévő hozzászólásainkat törölhetjük, illetve módosíthatjuk a hozzászólás mellett lévő `ceruza` és `szemetes` ikon segítségével.
 
 **Adminisztrátor(ok)ra** vonatkozóan:
 
-  - __Bármely felhasználó receptjeinek módosítása__: az admin bármely felhasználó receptjét módosíthatja a recept mellett lévő `ceruza` ikon segítségével.
-  - __Bármely felhasználó receptjeinek törlése__: az admin bármely felhasználó receptjét törölheti a recept mellett lévő `szemetes` ikon segítségével.
-  - __Bármely felhasználó hozzászólásának módosítása__:  az admin bármely felhasználó hozzászólását módosíthatja a hozzászólás mellett lévő `ceruza` ikon segítségével.
-  - __Bármely felhasználó hozzászólásának törlése__:  az admin bármely felhasználó hozzászólását módosíthatja a hozzászólás mellett lévő `szemetes` ikon segítségével.
-  - __Bármely felhasználó törlése__: az admin bármely felhasználót törölheti a felhasznál neve mellett lévő `szemetes` ikon segítségével a `Felhasználók` menüpontban.
-  - __Recept kedvencekhez adása__: a felhasználókhoz hasonlóan az admin is hozzáadhat a kedvencei közé recepteket a recept melletti üres `szív` ikonra kattintva.
-  - __Kedvencekből recept törlése__: a felhasználókhoz hasonlóan az admin is törölhet a kedvelt receptjei közül recepteket a recepet melleti teli `szív` ikonra kattintva.
-  - __Receptek létrehozása__: a felhasználókhoz hasonlóan az admin is hozhat létre új recepteket az `Új recept felvétele` gombra kattintva.
-  - __Receptek törlése__: a felhasználókhoz hasonlóan az admin is törölheti a saját receptjeit a recept melletti `szemetes` ikonra kattintva.
-  - __Kategória létrehozása__: az admin hozhat létre új kategóriákat a Kategóriák alatt az `Új kategória felvétele` gombra kattintva a `Kategóriák` menüpont alatt.
-  - __Kategória módosítása__: az admin módosíthatja egy meglévő kategória nevét a kategória melletti `ceruza` ikonra kattintva a `Kategóriák` menüpont alatt.
-  - __Kategória törlése__: az admin törölhet egy meglévő kategóriát a kategória melletti `szemetes` ikonra kattintva a `Kategóriák` menüpont alatt.
+  - **Bármely felhasználó receptjeinek módosítása**: az admin bármely felhasználó receptjét módosíthatja a recept mellett lévő `ceruza` ikon segítségével.
+  - **Bármely felhasználó receptjeinek törlése**: az admin bármely felhasználó receptjét törölheti a recept mellett lévő `szemetes` ikon segítségével.
+  - **Bármely felhasználó hozzászólásának módosítása**:  az admin bármely felhasználó hozzászólását módosíthatja a hozzászólás mellett lévő `ceruza` ikon segítségével.
+  - **Bármely felhasználó hozzászólásának törlése**:  az admin bármely felhasználó hozzászólását módosíthatja a hozzászólás mellett lévő `szemetes` ikon segítségével.
+  - **Bármely felhasználó törlése**: az admin bármely felhasználót törölheti a felhasznál neve mellett lévő `szemetes` ikon segítségével a `Felhasználók` menüpontban.
+  - **Recept kedvencekhez adása**: a felhasználókhoz hasonlóan az admin is hozzáadhat a kedvencei közé recepteket a recept melletti üres `szív` ikonra kattintva.
+  - **Kedvencekből recept törlése**: a felhasználókhoz hasonlóan az admin is törölhet a kedvelt receptjei közül recepteket a recepet melleti teli `szív` ikonra kattintva.
+  - **Receptek létrehozása**: a felhasználókhoz hasonlóan az admin is hozhat létre új recepteket az `Új recept felvétele` gombra kattintva.
+  - **Receptek törlése**: a felhasználókhoz hasonlóan az admin is törölheti a saját receptjeit a recept melletti `szemetes` ikonra kattintva.
+  - **Kategória létrehozása**: az admin hozhat létre új kategóriákat a Kategóriák alatt az `Új kategória felvétele` gombra kattintva a `Kategóriák` menüpont alatt.
+  - **Kategória módosítása**: az admin módosíthatja egy meglévő kategória nevét a kategória melletti `ceruza` ikonra kattintva a `Kategóriák` menüpont alatt.
+  - **Kategória törlése**: az admin törölhet egy meglévő kategóriát a kategória melletti `szemetes` ikonra kattintva a `Kategóriák` menüpont alatt.
 
 ### 4.2 Egy funkció folyamatának leírása (azaz mi történik kattintástól a visszajelzésig)
+
+Egy recept kedvenc receptjeink közé adása a következőképp történik:
+
+1. A kedvelni kívánt recept mellett lévő üres `szív` ikonra kattintunk.
+2. A kliens a szervernek egy POST metódusú kérést küld a `/api/recipes/favourites/{id}` végpontra, ahol az {id} helyére a kedvelt recept azonosítója (id) kerül.
+3. A szerver meghívja a `recipeService` `addToFavourites` metódusát.
+4. A `recipeService` az azonosító alapján kikeresi a kedvelt receptet, majd a recept `favouriteUsers` halmaza közé teszi az új felhasználót, végül elmenti a recept módosításait.
+5. Ezután a szerver válaszban értesíti a klienset, hogy minden rendben zajlott.
+6. Végül az üres `szív` ikon telivé válik, ezzel jelezve, hogy kedveltük az adott receptet.
 
 ### 4.3 Tesztelés
 
