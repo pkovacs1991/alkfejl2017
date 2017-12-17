@@ -417,7 +417,7 @@ megvalósítása.
 Egy recept kedvenc receptjeink közé adása a következőképp történik:
 
 1. A kedvelni kívánt recept mellett lévő üres `szív` ikonra kattintunk.
-2. A kliens a szervernek egy POST metódusú kérést küld a `/api/recipes/favourites/{id}` végpontra, ahol az {id} helyére a kedvelt recept azonosítója (id) kerül.
+2. A kliens a szervernek egy POST metódusú kérést küld az `/api/recipes/favourites/{id}` végpontra, ahol az {id} helyére a kedvelt recept azonosítója (id) kerül.
 3. A szerver meghívja a `recipeService` `addToFavourites` metódusát.
 4. A `recipeService` az azonosító alapján kikeresi a kedvelt receptet, majd a recept `favouriteUsers` halmaza közé teszi az új felhasználót, végül elmenti a recept módosításait.
 5. Ezután a szerver válaszban értesíti a klienset, hogy minden rendben zajlott.
