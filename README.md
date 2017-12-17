@@ -213,12 +213,12 @@ A szekvenciadiagram egy felhasználó regisztrálását illusztrálja a `POST /a
 
 ![Egy regisztráció szekvenciadiagramja](docs/szekvenciadiagram.png)
 
-## 4. Működő prototípus [Frontend megvalósítása]
+## 3. Működő prototípus [Frontend megvalósítása]
 
 A projekt frontend oldala egy külön [github](https://github.com/) repositoryban készült el. Ezt a repot az alábbi linken találhatjátok:  
 [https://github.com/pkovacs1991/alkfejl2017-angular](https://github.com/pkovacs1991/alkfejl2017-angular)
 
-### 4.1 Használati eset diagram
+### 3.1 Használati eset diagram
 
 #### Felhasználó használati eset diagramja
 
@@ -232,7 +232,7 @@ A projekt frontend oldala egy külön [github](https://github.com/) repositoryba
 
 ![Admin használati eset diagramja](docs/usecase_admin.png)
 
-### 4.2 Fejlesztői környezet
+### 3.2 Fejlesztői környezet
 
 #### Felhasznált eszközök
 
@@ -253,7 +253,7 @@ A projekt frontend oldala egy külön [github](https://github.com/) repositoryba
 5. Ezután az alábbi utasítással indítsuk el a kliens oldalunkat: `npm start`
 6. Ezek után a `http://localhost:4200/` címen el tudjuk érni a kliensüket
 
-### 4.3 Az alkalmazott könyvtárstruktúra
+### 3.3 Az alkalmazott könyvtárstruktúra
 
 - app
   - category-edit
@@ -377,4 +377,60 @@ A projekt frontend oldala egy külön [github](https://github.com/) repositoryba
   - `app.component.spec.ts`
   - `app.component.ts`
   - `app.module.ts`
-	
+
+## 4. Kész alkalmazás (Backend, Frontend összekapcsolása)
+
+### 4.1 Kliensoldali szolgáltatások listája, rövid leírással
+
+A megvalósítás során sikerült az összes, a tervezés fázisában elképzelt funkcionális követelmény 
+megvalósítása.
+
+**Minden felhasználóra** vonatkozóan:
+
+  - Regisztráció: új profil létrehozása a `Regisztráció` menüpont alatt, amelynek segítségével be lehet jelentkezni az oldalra, hogy további funkciókat lehessen elérni.
+  - Bejelentkezés: meglévő profillal való belépés az oldalra a `Bejelentkezés` menüpont alatt, hogy további funkciókat lehessen elérni.
+  - Kijelentkezés: kilépés a profilunkból a `Kilépés` gombra kattintva.
+  - Recept kedvencekhez adása: ha egy recept megtetszett, akkor azt a kedvenceink közé rakhatjuk a recept melletti üres `szív` ikonra kattintva, hogy később gyorsabban megtalálhassuk azt a Kedvelt Receptek menüpont alatt.
+  - Kedvencekből recept törlése: ha idő közben mégse kedvelnénk már egy korábbi receptet, akkor ennek segítségével eltávolíthatjuk azt a kedvenceink közül a recept melleti teli `szív` ikonra kattintva.
+  - Receptek létrehozása: ha van olyan recept, ami nincs még fent az oldalon és szeretnéd másokkal is megosztani, akkor `Új recept felvétele` gomb segítségével publikálhatod azt az oldalon.
+  - Receptek törlése: egy korábban, általad publikált receptet törölhetsz a recept melletti `szemetes` ikonra kattintva.
+  - Hozzászólás a receptekhez: egy recept megtekintése alatt lehet látni a hozzákapcsolodó hozzászólásokat. Az `Új hozzászólás` gomb segítségével további hozzászólást adhatunk hozzá.
+  - Hozzászólás szerkesztése, törlése: meglévő hozzászólásainkat törölhetjük, illetve módosíthatjuk a hozzászólás mellett lévő `ceruza` és `szemetes` ikon segítségével.
+
+**Adminisztrátor(ok)ra** vonatkozóan:
+
+  - Bármely felhasználó receptjeinek módosítása: az admin bármely felhasználó receptjét módosíthatja a recept mellett lévő `ceruza` ikon segítségével.
+  - Bármely felhasználó receptjeinek törlése az admin bármely felhasználó receptjét törölheti a recept mellett lévő `szemetes` ikon segítségével.
+  - Bármely felhasználó hozzászólásának módosítása:  az admin bármely felhasználó hozzászólását módosíthatja a hozzászólás mellett lévő `ceruza` ikon segítségével.
+  - Bármely felhasználó hozzászólásának törlése:  az admin bármely felhasználó hozzászólását módosíthatja a hozzászólás mellett lévő `szemetes` ikon segítségével.
+  - Bármely felhasználó törlése: az admin bármely felhasználót törölheti a felhasznál neve mellett lévő `szemetes` ikon segítségével a `Felhasználók` menüpontban.
+  - Recept kedvencekhez adása: a felhasználókhoz hasonlóan az admin is hozzáadhat a kedvencei közé recepteket a recept melletti üres `szív` ikonra kattintva.
+  - Kedvencekből recept törlése: a felhasználókhoz hasonlóan az admin is törölhet a kedvelt receptjei közül recepteket a recepet melleti teli `szív` ikonra kattintva.
+  - Receptek létrehozása: a felhasználókhoz hasonlóan az admin is hozhat létre új recepteket az `Új recept felvétele` gombra kattintva.
+  - Receptek törlése: a felhasználókhoz hasonlóan az admin is törölheti a saját receptjeit a recept melletti `szemetes` ikonra kattintva.
+  - Kategória létrehozása: az admin hozhat létre új kategóriákat a Kategóriák alatt az `Új kategória felvétele` gombra kattintva a `Kategóriák` menüpont alatt.
+  - Kategória módosítása: az admin módosíthatja egy meglévő kategória nevét a kategória melletti `ceruza` ikonra kattintva a `Kategóriák` menüpont alatt.
+  - Kategória törlése: az admin törölhet egy meglévő kategóriát a kategória melletti `szemetes` ikonra kattintva a `Kategóriák` menüpont alatt.
+
+### 4.2 Egy funkció folyamatának leírása (azaz mi történik kattintástól a visszajelzésig)
+
+### 4.3 Tesztelés
+
+A teszteléshez szükség van a [Protractor](http://www.protractortest.org) nevezetű Node.js programra, úgyhogy ha nincs fent a gépünkön,
+akkor a tesztelés megkezdése előtt telepíteni kell azt. Globálisan feltelepíteni az alábbi paranccsal tudjuk:  
+`npm install -g protractor`
+A következő utasítással tudjuk ellenőrizni, hogy működik-e:  
+`protractor --version`
+
+A teszteléshez használt tesztfájlok a kliensoldali repository `e2e` mappájában találhatóak. 
+A tesztelés során az alábbiakat vizsgáltuk:
+  - A főoldal betöltése során a megfelelő főcím jelenik meg
+  - A bejelentkezés oldal tesztelése helyes és helytelen adatokkal, illetve kijelentkezés sikeres bejelentkezés után
+  - Receptek oldalon megjelenik a receptek tábla, illetve annak szűrésére egy példa
+  - Regisztráció tesztelése
+
+A tesztelést az alábbi paranccsal indíthatjuk el:
+`protractor protractor.conf.js`
+
+Sikeres tesztelés után az alábbi kimenetet kapjuk:
+![Sikeres teszteset kimenete](docs/test_output.png)
