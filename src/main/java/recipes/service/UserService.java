@@ -1,5 +1,7 @@
 package recipes.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.Data;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +42,12 @@ public class UserService {
         user = null;
     }
 
+    public List<User> getUsers() {
+        List<User> list = new ArrayList<>();
+        userRepository.findAll().iterator().forEachRemaining(list::add);
+        return list;
+    }
+    
     public User getLoggedInUser() {
         return user;
     }
