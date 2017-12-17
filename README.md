@@ -173,6 +173,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 #### user
 
 - `GET /api/user` : Saját felhasználói fiók elérése
+- `GET /api/user/all` : az összes felhasználói fiók lekérdezése
 - `GET /api/user/login` : Bejelentkezés
 - `GET /api/user/logout`: Kijelentkezés
 - `POST /api/user/register` : Regisztráció
