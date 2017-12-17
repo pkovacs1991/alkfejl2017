@@ -1,6 +1,5 @@
 package recipes.controller;
 
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -46,11 +45,6 @@ public class UserController {
     public ResponseEntity<String> logout() {
         userService.logout();
         return ResponseEntity.ok().body("Successful logout!");
-    }
-    
-    @GetMapping("/all")
-    public ResponseEntity<List<User>> getUsers() {
-        return ResponseEntity.ok(userService.getUsers());
     }
     
     @Role({ADMIN})
