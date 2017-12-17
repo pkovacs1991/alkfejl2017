@@ -1,7 +1,7 @@
-INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','7e240de74fb1ed08fa08d38063f6a6a91462a815','ADMIN');
-INSERT INTO USER (username,email,password,role) VALUES ('barack','b@b.com','5cb138284d431abd6a053a56625ec088bfb88912','USER');
-INSERT INTO USER (username,email,password,role) VALUES ('cseresznye','c@c.com','f36b4825e5db2cf7dd2d2593b3f5c24c0311d8b2','USER');
-INSERT INTO USER (username,email,password,role) VALUES ('dio','d@d.com','9c969ddf454079e3d439973bbab63ea6233e4087','USER');
+INSERT INTO USER (username,email,password,role) VALUES ('alma','a@a.com','aaa','ADMIN');
+INSERT INTO USER (username,email,password,role) VALUES ('barack','b@b.com','bbb','USER');
+INSERT INTO USER (username,email,password,role) VALUES ('cseresznye','c@c.com','ccc','USER');
+INSERT INTO USER (username,email,password,role) VALUES ('dio','d@d.com','ddd','USER');
 
 INSERT INTO CATEGORY (name) VALUES ('PASTA');
 INSERT INTO CATEGORY (name) VALUES ('PIZZA');
