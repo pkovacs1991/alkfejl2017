@@ -383,7 +383,7 @@ A projekt frontend oldala egy külön [github](https://github.com/) repositoryba
 ### 4.1 Kliensoldali szolgáltatások listája, rövid leírással
 
 A megvalósítás során sikerült az összes, a tervezés fázisában elképzelt funkcionális követelmény 
-megvalósítása.
+megvalósítása. Ezáltal:
 
 **Minden felhasználóra** vonatkozóan:
 
@@ -441,5 +441,5 @@ A tesztelés során az alábbiakat vizsgáltuk:
 A tesztelést az alábbi paranccsal indíthatjuk el:  
 `protractor protractor.conf.js`
 
-Sikeres tesztelés után az alábbi kimenetet kapjuk:
+Sikeres tesztelés esetén az alábbi kimenetet kapjuk:
 ![Sikeres teszteset kimenete](docs/test_output.png)
