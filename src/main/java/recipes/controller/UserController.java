@@ -1,6 +1,9 @@
 package recipes.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +22,7 @@ public class UserController {
     private UserService userService;
 
     @Role({USER,ADMIN})
-    @GetMapping
+    @GetMapping("/current")
     public ResponseEntity<User> user() {
         if (userService.isLoggedIn()) {
             return ResponseEntity.ok(userService.getUser());
@@ -43,20 +46,26 @@ public class UserController {
 
     @GetMapping("/logout")
     @Role({USER,ADMIN})
-    public ResponseEntity<String> logout() {
+    public ResponseEntity<Map<String, String>> logout() {
         userService.logout();
-        return ResponseEntity.ok().body("Successful logout!");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Logout success!" );
+        return ResponseEntity.ok().body(response);
     }
     
-    @GetMapping("/all")
+    @GetMapping("")
+    @Role({ADMIN})
     public ResponseEntity<List<User>> getUsers() {
         return ResponseEntity.ok(userService.getUsers());
     }
-    
+
+
     @Role({ADMIN})
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable long id) {
+    public ResponseEntity<Map<String, String>> deleteUser(@PathVariable long id) {
         userService.deleteUser(id);
-        return ResponseEntity.ok("Delete Success!");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Delete success!" );
+        return ResponseEntity.ok(response);
     }
 }

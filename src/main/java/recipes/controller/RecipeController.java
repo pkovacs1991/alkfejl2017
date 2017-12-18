@@ -10,7 +10,10 @@ import recipes.service.UserService;
 import recipes.service.annotation.Role;
 import recipes.service.exception.NotFoundException;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static recipes.entity.User.Role.ADMIN;
 import static recipes.entity.User.Role.USER;
@@ -44,15 +47,23 @@ public class RecipeController {
 
     @DeleteMapping("/{id}")
     @Role({ADMIN,USER})
-    public ResponseEntity<String> deleteRecipe(@PathVariable long id) {
+    public ResponseEntity<Map<String, String>> deleteRecipe(@PathVariable long id) {
         recipeService.deleteRecipe(id);
-        return ResponseEntity.ok("Delete Success!");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Delete Success!" );
+        return ResponseEntity.ok(response);
     }
 
 
     @GetMapping
     public ResponseEntity<List<Recipe>> getRecipes() {
         return ResponseEntity.ok(recipeService.getRecipes());
+    }
+
+
+    @GetMapping("/favourites")
+    public ResponseEntity<Set<Recipe>> getFavouriteRecipes() {
+        return ResponseEntity.ok(recipeService.getFavouriteRecipes(userService.getLoggedInUser()));
     }
 
 
@@ -69,15 +80,19 @@ public class RecipeController {
 
     @PostMapping("/favourites/{id}")
     @Role({ADMIN,USER})
-    public ResponseEntity<String> addToFavourites(@PathVariable long id) {
+    public ResponseEntity<Map<String, String>> addToFavourites(@PathVariable long id) {
         recipeService.addToFavourites(userService.getLoggedInUser(),id);
-        return ResponseEntity.ok("Successfully added to favorites");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Successfully added to favorites" );
+        return ResponseEntity.ok(response);
     }
 
     @DeleteMapping("/favourites/{id}")
     @Role({ADMIN,USER})
-    public ResponseEntity<String> deleteFromFavourites(@PathVariable long id) {
+    public ResponseEntity<Map<String, String>> deleteFromFavourites(@PathVariable long id) {
         recipeService.removeFromFavourites(userService.getLoggedInUser(),id);
-        return ResponseEntity.ok("Successfully deleted from favorites");
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Successfully deleted from favorites" );
+        return ResponseEntity.ok(response);
     }
 }

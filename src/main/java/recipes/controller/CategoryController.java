@@ -10,7 +10,9 @@ import recipes.service.annotation.Role;
 import recipes.service.exception.NotFoundException;
 import recipes.service.exception.UserNotValidException;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static recipes.entity.User.Role.ADMIN;
 import static recipes.entity.User.Role.USER;
@@ -40,9 +42,11 @@ public class CategoryController {
 
     @DeleteMapping("/{id}")
     @Role({ADMIN})
-    public ResponseEntity<String> deleteCategory(@PathVariable long id) {
+    public ResponseEntity<Map<String, String>> deleteCategory(@PathVariable long id) {
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Delete Success!" );
         categoryService.deleteCategory(id);
-        return ResponseEntity.ok("Delete Success!");
+        return ResponseEntity.ok(response);
     }
 
 

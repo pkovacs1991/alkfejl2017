@@ -25,9 +25,14 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public User getUser(long id) {
+        return userRepository.findOne(id);
+    }
+
     public User register(User user) {
         String encryptedPassword = DigestUtils.sha1Hex(user.getPassword());
         user.setPassword(encryptedPassword);
+        user.setRole(User.Role.USER);
         return this.user = userRepository.save(user);
     }
 

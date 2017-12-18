@@ -1,6 +1,9 @@
 package recipes.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -64,10 +67,12 @@ public class CommentController {
     
     @DeleteMapping("/{id}")
     @Role({ADMIN,USER})
-    public ResponseEntity<String> deleteComment(@PathVariable long id) {
+    public ResponseEntity<Map<String, String>> deleteComment(@PathVariable long id) {
         try{
             commentService.deleteComment(id, userService.getLoggedInUser());
-            return ResponseEntity.ok("Delete Success!");
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Delete Success!" );
+            return ResponseEntity.ok(response);
         }catch(NotOwnCommentException e){
             return ResponseEntity.badRequest().build();
         }

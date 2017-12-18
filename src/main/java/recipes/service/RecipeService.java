@@ -6,10 +6,13 @@ import org.springframework.stereotype.Service;
 import recipes.entity.Recipe;
 import recipes.entity.User;
 import recipes.repository.RecipeRepository;
+import recipes.repository.UserRepository;
 import recipes.service.exception.NotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
 import recipes.service.exception.NotOwnRecipeException;
 
 @Service
@@ -18,6 +21,10 @@ public class RecipeService {
 
     @Autowired
     private RecipeRepository recipeRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     public Recipe createRecipe(Recipe recipe, User user) {
         recipe.setOwner(user);
@@ -68,5 +75,9 @@ public class RecipeService {
         List<Recipe> list = new ArrayList<>();
         recipeRepository.getAllByOwner(loggedInUser).iterator().forEachRemaining(list::add);
         return list;
+    }
+
+    public Set<Recipe> getFavouriteRecipes(User user) {
+        return userRepository.findOne(user.getId()).getFavoriteRecipes();
     }
 }
