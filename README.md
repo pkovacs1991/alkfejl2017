@@ -15,6 +15,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 * Kedvencekből recept törlése
 * Receptek létrehozása
 * Receptek törlése
+* Hozzászólás lekérése recept id alapján 
 * hozzászólás a receptekhez
 * hozzászólás szerkesztése, törlése
 
@@ -202,6 +203,7 @@ A projekt célja egy receptek feltöltésére használható webes alkalmazás el
 #### Comment
 
 - `GET /api/comments` : Az összes hozzászólás lekérdezése
+- `GET api/comments/recipe/{id}` Hozzászólások lekérése recept id alapján
 - `GET /api/comments/my` : Az összes saját hozzászólás lekérdezése
 - `GET /api/comments/{id}` : Egy hozzászólás lekérdezése
 - `POST /api/comments` : Hozzászólás létrehozása
