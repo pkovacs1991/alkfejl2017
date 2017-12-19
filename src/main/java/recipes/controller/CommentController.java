@@ -18,6 +18,7 @@ import recipes.entity.Comment;
 import static recipes.entity.User.Role.ADMIN;
 import static recipes.entity.User.Role.USER;
 import recipes.service.CommentService;
+import recipes.service.RecipeService;
 import recipes.service.UserService;
 import recipes.service.annotation.Role;
 import recipes.service.exception.NotFoundException;
@@ -29,6 +30,9 @@ public class CommentController {
     
     @Autowired
     CommentService commentService;
+
+    @Autowired
+    RecipeService recipeService;
     
     @Autowired
     UserService userService;
@@ -36,6 +40,11 @@ public class CommentController {
     @GetMapping
     public ResponseEntity<List<Comment>> getComments() {
         return ResponseEntity.ok(commentService.getComments());
+    }
+
+    @GetMapping("/recipe/{id}")
+    public ResponseEntity<List<Comment>> getCommentsByRecipe(@PathVariable long id) {
+        return ResponseEntity.ok(recipeService.getRecipeById(id).getComments());
     }
     
     @GetMapping("/my")

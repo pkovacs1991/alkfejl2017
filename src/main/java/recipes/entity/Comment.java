@@ -23,7 +23,6 @@ public class Comment {
     private User user;
     
     @ManyToOne(targetEntity = Recipe.class)
-     @JsonIgnoreProperties("comments")
     private Recipe recipe;
     
     @Column(nullable=false)
